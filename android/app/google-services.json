@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "727656541815",
+    "firebase_url": "https://etwelve-apps-default-rtdb.firebaseio.com",
+    "project_id": "etwelve-apps",
+    "storage_bucket": "etwelve-apps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727656541815:android:bf406e736a7747f3e06072",
+        "android_client_info": {
+          "package_name": "com.etwelve.papers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727656541815-juj1b65jo9pvj9hu9pf8m49dies8bgke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8jJ13gGkuIN0AXDSMKPwwG_E45-eZN3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727656541815-juj1b65jo9pvj9hu9pf8m49dies8bgke.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "727656541815-j4r3gpgbe67qgaogfgv50t6db9ml34m5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.papers.etwelve"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727656541815:android:1ebcbf9330b7c6bfe06072",
+        "android_client_info": {
+          "package_name": "com.papers.etwelve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727656541815-ii2245ban828kebrkq9cqqf2cpj5e787.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.papers.etwelve",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "727656541815-juj1b65jo9pvj9hu9pf8m49dies8bgke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8jJ13gGkuIN0AXDSMKPwwG_E45-eZN3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727656541815-juj1b65jo9pvj9hu9pf8m49dies8bgke.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "727656541815-j4r3gpgbe67qgaogfgv50t6db9ml34m5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.papers.etwelve"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
