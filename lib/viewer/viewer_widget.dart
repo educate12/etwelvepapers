@@ -108,6 +108,7 @@ class _ViewerWidgetState extends State<ViewerWidget> {
         final viewerPapersRecord = snapshot.data!;
         return Scaffold(
           key: scaffoldKey,
+          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           appBar: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             iconTheme: IconThemeData(
@@ -137,7 +138,6 @@ class _ViewerWidgetState extends State<ViewerWidget> {
             centerTitle: false,
             elevation: 2,
           ),
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           body: SafeArea(
             child: GestureDetector(
               onTap: () => FocusScope.of(context).unfocus(),
@@ -444,16 +444,20 @@ class _ViewerWidgetState extends State<ViewerWidget> {
                                                               context.pushNamed(
                                                                 'watchVideo',
                                                                 queryParams: {
-                                                                  'videoMemo': serializeParam(
-                                                                      listViewLessonsRecord
-                                                                          .reference,
-                                                                      ParamType
-                                                                          .DocumentReference),
-                                                                  'paper': serializeParam(
-                                                                      listViewLessonsRecord
-                                                                          .paper,
-                                                                      ParamType
-                                                                          .DocumentReference),
+                                                                  'videoMemo':
+                                                                      serializeParam(
+                                                                    listViewLessonsRecord
+                                                                        .reference,
+                                                                    ParamType
+                                                                        .DocumentReference,
+                                                                  ),
+                                                                  'paper':
+                                                                      serializeParam(
+                                                                    listViewLessonsRecord
+                                                                        .paper,
+                                                                    ParamType
+                                                                        .DocumentReference,
+                                                                  ),
                                                                 }.withoutNulls,
                                                                 extra: <String,
                                                                     dynamic>{
@@ -614,12 +618,16 @@ class _ViewerWidgetState extends State<ViewerWidget> {
                                                                         'watchVideo',
                                                                         queryParams:
                                                                             {
-                                                                          'videoMemo': serializeParam(
-                                                                              listViewLessonsRecord.reference,
-                                                                              ParamType.DocumentReference),
-                                                                          'paper': serializeParam(
-                                                                              listViewLessonsRecord.paper,
-                                                                              ParamType.DocumentReference),
+                                                                          'videoMemo':
+                                                                              serializeParam(
+                                                                            listViewLessonsRecord.reference,
+                                                                            ParamType.DocumentReference,
+                                                                          ),
+                                                                          'paper':
+                                                                              serializeParam(
+                                                                            listViewLessonsRecord.paper,
+                                                                            ParamType.DocumentReference,
+                                                                          ),
                                                                         }.withoutNulls,
                                                                         extra: <
                                                                             String,

@@ -53,6 +53,7 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
         final changePasswordUsersRecord = snapshot.data!;
         return Scaffold(
           key: scaffoldKey,
+          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           appBar: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             iconTheme: IconThemeData(
@@ -75,7 +76,6 @@ class _ChangePasswordWidgetState extends State<ChangePasswordWidget> {
             centerTitle: false,
             elevation: 2,
           ),
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           body: SafeArea(
             child: GestureDetector(
               onTap: () => FocusScope.of(context).unfocus(),

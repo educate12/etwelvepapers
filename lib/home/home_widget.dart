@@ -250,9 +250,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                               ),
                             ),
                             FlutterFlowChoiceChips(
-                              initiallySelected: syllabusValue != null
-                                  ? [syllabusValue!]
-                                  : ['caps'],
+                              initiallySelected: ['caps'],
                               options: [ChipData('caps'), ChipData('ieb')],
                               onChanged: (val) =>
                                   setState(() => syllabusValue = val?.first),
@@ -308,9 +306,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                       subjectsSubjectsRecordList =
                                       snapshot.data!;
                                   return FlutterFlowChoiceChips(
-                                    initiallySelected: subjectsValue != null
-                                        ? [subjectsValue!]
-                                        : ['Mathematics'],
+                                    initiallySelected: ['Mathematics'],
                                     options: subjectsSubjectsRecordList
                                         .map((e) => e.subjectName!)
                                         .toList()
@@ -587,8 +583,9 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                               'viewer',
                                               queryParams: {
                                                 'paper': serializeParam(
-                                                    columnPapersRecord,
-                                                    ParamType.Document),
+                                                  columnPapersRecord,
+                                                  ParamType.Document,
+                                                ),
                                               }.withoutNulls,
                                               extra: <String, dynamic>{
                                                 'paper': columnPapersRecord,
@@ -604,7 +601,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                             ),
                                             child: Container(
                                               width: double.infinity,
-                                              height: 50,
+                                              height: 40,
                                               decoration: BoxDecoration(
                                                 boxShadow: [
                                                   BoxShadow(
@@ -668,8 +665,9 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                       'viewer',
                                                       queryParams: {
                                                         'paper': serializeParam(
-                                                            columnPapersRecord,
-                                                            ParamType.Document),
+                                                          columnPapersRecord,
+                                                          ParamType.Document,
+                                                        ),
                                                       }.withoutNulls,
                                                       extra: <String, dynamic>{
                                                         'paper':

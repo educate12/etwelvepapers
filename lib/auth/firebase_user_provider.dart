@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:rxdart/rxdart.dart';
 
+import 'auth_util.dart';
+
 class EtwelvePapersFirebaseUser {
   EtwelvePapersFirebaseUser(this.user);
   User? user;
@@ -16,4 +18,9 @@ Stream<EtwelvePapersFirebaseUser> etwelvePapersFirebaseUserStream() =>
             ? TimerStream(true, const Duration(seconds: 1))
             : Stream.value(user))
         .map<EtwelvePapersFirebaseUser>(
-            (user) => currentUser = EtwelvePapersFirebaseUser(user));
+      (user) {
+        currentUser = EtwelvePapersFirebaseUser(user);
+        updateUserJwtTimer(user);
+        return currentUser!;
+      },
+    );

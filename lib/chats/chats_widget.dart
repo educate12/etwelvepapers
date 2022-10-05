@@ -29,6 +29,7 @@ class _ChatsWidgetState extends State<ChatsWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         automaticallyImplyLeading: false,
@@ -87,7 +88,9 @@ class _ChatsWidgetState extends State<ChatsWidget> {
                   'startChat',
                   queryParams: {
                     'chat': serializeParam(
-                        createdChat!.reference, ParamType.DocumentReference),
+                      createdChat!.reference,
+                      ParamType.DocumentReference,
+                    ),
                   }.withoutNulls,
                 );
 
@@ -104,7 +107,6 @@ class _ChatsWidgetState extends State<ChatsWidget> {
         centerTitle: true,
         elevation: 4,
       ),
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -149,13 +151,15 @@ class _ChatsWidgetState extends State<ChatsWidget> {
                             'chatPage',
                             queryParams: {
                               'chatUser': serializeParam(
-                                  chatInfo.otherUsers.length == 1
-                                      ? chatInfo.otherUsersList.first
-                                      : null,
-                                  ParamType.Document),
+                                chatInfo.otherUsers.length == 1
+                                    ? chatInfo.otherUsersList.first
+                                    : null,
+                                ParamType.Document,
+                              ),
                               'chatRef': serializeParam(
-                                  chatInfo.chatRecord.reference,
-                                  ParamType.DocumentReference),
+                                chatInfo.chatRecord.reference,
+                                ParamType.DocumentReference,
+                              ),
                             }.withoutNulls,
                             extra: <String, dynamic>{
                               'chatUser': chatInfo.otherUsers.length == 1

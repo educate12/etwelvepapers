@@ -63,6 +63,7 @@ class _WatchVideoWidgetState extends State<WatchVideoWidget> {
         final watchVideoLessonsRecord = snapshot.data!;
         return Scaffold(
           key: scaffoldKey,
+          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           appBar: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             iconTheme: IconThemeData(
@@ -84,7 +85,6 @@ class _WatchVideoWidgetState extends State<WatchVideoWidget> {
             centerTitle: false,
             elevation: 0,
           ),
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           body: SafeArea(
             child: GestureDetector(
               onTap: () => FocusScope.of(context).unfocus(),
@@ -615,8 +615,12 @@ class _WatchVideoWidgetState extends State<WatchVideoWidget> {
                                                                       ),
                                                                       Text(
                                                                         dateTimeFormat(
-                                                                            'relative',
-                                                                            listViewCommentsRecord.date!),
+                                                                          'relative',
+                                                                          listViewCommentsRecord
+                                                                              .date!,
+                                                                          locale:
+                                                                              FFLocalizations.of(context).languageCode,
+                                                                        ),
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyText1
                                                                             .override(

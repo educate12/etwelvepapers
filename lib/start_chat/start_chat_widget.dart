@@ -50,6 +50,7 @@ class _StartChatWidgetState extends State<StartChatWidget> {
         final startChatChatsRecord = snapshot.data!;
         return Scaffold(
           key: scaffoldKey,
+          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           appBar: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             iconTheme: IconThemeData(
@@ -107,7 +108,6 @@ class _StartChatWidgetState extends State<StartChatWidget> {
             centerTitle: false,
             elevation: 0,
           ),
-          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           body: GestureDetector(
             onTap: () => FocusScope.of(context).unfocus(),
             child: Container(
@@ -205,11 +205,13 @@ class _StartChatWidgetState extends State<StartChatWidget> {
                                   'chatPage',
                                   queryParams: {
                                     'chatUser': serializeParam(
-                                        listViewUsersRecord,
-                                        ParamType.Document),
+                                      listViewUsersRecord,
+                                      ParamType.Document,
+                                    ),
                                     'chatRef': serializeParam(
-                                        startChatChatsRecord.reference,
-                                        ParamType.DocumentReference),
+                                      startChatChatsRecord.reference,
+                                      ParamType.DocumentReference,
+                                    ),
                                   }.withoutNulls,
                                   extra: <String, dynamic>{
                                     'chatUser': listViewUsersRecord,

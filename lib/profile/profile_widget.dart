@@ -86,47 +86,6 @@ class _ProfileWidgetState extends State<ProfileWidget>
         final profileUsersRecord = snapshot.data!;
         return Scaffold(
           key: scaffoldKey,
-          appBar: AppBar(
-            backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-            automaticallyImplyLeading: false,
-            leading: FlutterFlowIconButton(
-              borderColor: Colors.transparent,
-              borderRadius: 30,
-              borderWidth: 1,
-              buttonSize: 60,
-              icon: Icon(
-                Icons.arrow_back_ios,
-                color: FlutterFlowTheme.of(context).secondaryColor,
-                size: 30,
-              ),
-              onPressed: () async {
-                logFirebaseEvent('PROFILE_PAGE_arrow_back_ios_ICN_ON_TAP');
-                logFirebaseEvent('IconButton_Navigate-To');
-
-                context.pushNamed(
-                  'home',
-                  extra: <String, dynamic>{
-                    kTransitionInfoKey: TransitionInfo(
-                      hasTransition: true,
-                      transitionType: PageTransitionType.leftToRight,
-                      duration: Duration(milliseconds: 100),
-                    ),
-                  },
-                );
-              },
-            ),
-            title: Text(
-              'Profile',
-              style: FlutterFlowTheme.of(context).subtitle2.override(
-                    fontFamily: 'Ubuntu',
-                    color: FlutterFlowTheme.of(context).primaryText,
-                    fontSize: 20,
-                  ),
-            ),
-            actions: [],
-            centerTitle: false,
-            elevation: 2,
-          ),
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           floatingActionButton: FloatingActionButton.extended(
             onPressed: () async {
@@ -171,6 +130,47 @@ class _ProfileWidgetState extends State<ProfileWidget>
                   ),
               ],
             ),
+          ),
+          appBar: AppBar(
+            backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+            automaticallyImplyLeading: false,
+            leading: FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 30,
+              borderWidth: 1,
+              buttonSize: 60,
+              icon: Icon(
+                Icons.arrow_back_ios,
+                color: FlutterFlowTheme.of(context).secondaryColor,
+                size: 30,
+              ),
+              onPressed: () async {
+                logFirebaseEvent('PROFILE_PAGE_arrow_back_ios_ICN_ON_TAP');
+                logFirebaseEvent('IconButton_Navigate-To');
+
+                context.pushNamed(
+                  'home',
+                  extra: <String, dynamic>{
+                    kTransitionInfoKey: TransitionInfo(
+                      hasTransition: true,
+                      transitionType: PageTransitionType.leftToRight,
+                      duration: Duration(milliseconds: 100),
+                    ),
+                  },
+                );
+              },
+            ),
+            title: Text(
+              'Profile',
+              style: FlutterFlowTheme.of(context).subtitle2.override(
+                    fontFamily: 'Ubuntu',
+                    color: FlutterFlowTheme.of(context).primaryText,
+                    fontSize: 20,
+                  ),
+            ),
+            actions: [],
+            centerTitle: false,
+            elevation: 2,
           ),
           body: SafeArea(
             child: GestureDetector(
